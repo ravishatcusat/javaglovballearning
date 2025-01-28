@@ -1,2 +1,3 @@
+com\jmp\serviceimpl\SubscriptionNotFoundException.class
 module-info.class
 com\jmp\serviceimpl\ServiceImpl.class

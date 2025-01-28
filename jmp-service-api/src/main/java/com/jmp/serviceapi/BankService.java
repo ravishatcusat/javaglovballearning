@@ -24,7 +24,6 @@ public interface BankService {
         List<User> users = getAllUsers();
         LocalDate now = LocalDate.now();
 
-        // Calculate average age
         return users.stream()
                 .mapToLong(user -> ChronoUnit.YEARS.between(user.getBirthday(), now)) 
                 .average() 
@@ -34,7 +33,7 @@ public interface BankService {
 	
 	static boolean isPayableUser(User user) {
 		LocalDate now = LocalDate.now();
-	    long age = ChronoUnit.YEARS.between(user.getBirthday(), now);
+	    var age = ChronoUnit.YEARS.between(user.getBirthday(), now);
 	    return age >= 18;
 	}
 	

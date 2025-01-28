@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.ServiceLoader;
 
 import com.jmp.dto.BankCard;
 import com.jmp.dto.Subscription;
@@ -52,7 +53,11 @@ public class Application {
                 subs -> subs.getStartDate().getYear() == 2024);
         subscriptions2024.forEach(System.out::println);
         
-        
+        //25
+//        ServiceLoader<Service> loader = ServiceLoader.load(Service.class);
+//        for (Service service : loader) {
+//            System.out.println("Loaded Service Implementation: " + service.getClass().getName());
+//        }
         
         try {
 			bankService.getSubscriptionOrThrow("0000-0000-0000-0000");

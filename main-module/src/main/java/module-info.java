@@ -3,4 +3,6 @@ module main.module {
     requires jmp.bank.api;
     requires jmp.cloud.service.impl;
     requires jmp.service.api;
+    
+    uses com.jmp.serviceapi.BankService;
 }
